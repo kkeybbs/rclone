@@ -40,9 +40,9 @@ test:	rclone
 
 # Quick test
 quicktest:
-	RCLONE_CONFIG="/notfound" go test $(BUILDTAGS) $(GO_FILES)
+	RCLONE_CONFIG="/notfound" go test -v $(BUILDTAGS) $(GO_FILES)
 ifdef FULL_TESTS
-	RCLONE_CONFIG="/notfound" go test $(BUILDTAGS) -cpu=2 -race $(GO_FILES)
+	RCLONE_CONFIG="/notfound" go test -v $(BUILDTAGS) -cpu=2 -race $(GO_FILES)
 endif
 
 # Do source code quality checks

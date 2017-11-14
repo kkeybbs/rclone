@@ -41,6 +41,7 @@ var (
 func TestMain(m *testing.M, fn MountFn) {
 	mountFn = fn
 	flag.Parse()
+	fs.Config.LogLevel = fs.LogLevelDebug
 	var rc int
 	cacheModes := []vfs.CacheMode{
 		vfs.CacheModeOff,
